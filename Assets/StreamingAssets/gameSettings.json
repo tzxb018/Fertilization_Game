@@ -1,0 +1,16 @@
+{
+	"stagesToMax": 9.0,
+	"fertilizerTypeNames": ["Type1", "Type2", "Type3", "Type4", "Type5"],
+	"startScoreModifier": 400.0,
+	"endScoreModifier": 400.0,
+	"startGameSpeed": 1.5,
+	"endGameSpeed": 3.0,
+	"startBarrelSpawnDelay": 3.0,
+	"endBarrelSpawnDelay": 0.5,
+	"startBarrelsRequired": 6.0,
+	"endBarrelsRequired": 10.0,
+	"startMaxLives": 3.0,
+	"endMaxLives": 3.0,
+	"startMaxSimultaneousBarrels": 3.0,
+	"endMaxSimultaneousBarrels": 20.0
+}

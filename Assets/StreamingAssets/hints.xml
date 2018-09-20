@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<BarrelHolder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Barrels>
+    <Barrel>
+      <FerilizerType>Type1</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Type1</HintText>
+    </Barrel>
+    <Barrel>
+      <FerilizerType>Type2</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Type2</HintText>
+    </Barrel>
+    <Barrel>
+      <FerilizerType>Type3</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Type3</HintText>
+    </Barrel>
+    <Barrel>
+      <FerilizerType>Type4</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Type4</HintText>
+    </Barrel>
+    <Barrel>
+      <FerilizerType>Type5</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Type5</HintText>
+    </Barrel>
+    <Barrel>
+      <FerilizerType>Type1</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>4-3 = </HintText>
+    </Barrel>
+    <Barrel>
+      <FerilizerType>Type1</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>1*0 + 1</HintText>
+    </Barrel>
+	<Barrel>
+      <FerilizerType>Type3</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Template</HintText>
+      <HintImage>hint.png</HintImage>
+    </Barrel>
+	<Barrel>
+      <FerilizerType>Template</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Template</HintText>
+      <HintImage>Template.png</HintImage>
+    </Barrel>
+  </Barrels>
+</BarrelHolder>

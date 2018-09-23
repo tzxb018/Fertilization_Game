@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 	public float barrelSpawnDelay = 3f;
 	// -1 represents infinite
 	public int maxBarrels = 4;
-	public int maxLives = 3;
+	public int maxLives = 5;
 	public int barrelsRequired = 10;
 
 	[Range (0, 1)]

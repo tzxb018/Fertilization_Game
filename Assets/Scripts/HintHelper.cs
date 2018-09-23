@@ -31,7 +31,7 @@ public class HintHelper : MonoBehaviour
 	{
 		if (_manager == null) {
 			_manager = this;
-			loadedBarrels = LoadBarrels ("hints.xml");
+			loadedBarrels = LoadBarrels ("hints_bball.xml");
 		} else {
 			Destroy (gameObject);
 		}
@@ -47,7 +47,7 @@ public class HintHelper : MonoBehaviour
 			WWW reader = new WWW (filePath);
 			while (!reader.isDone) {
 			}
-
+            Debug.Log(reader.text); //***
 			result = reader.text;
 		} else {
 			if (File.Exists (filePath)) {

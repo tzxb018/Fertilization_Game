@@ -1,6 +1,6 @@
 {
 	"stagesToMax": 9.0,
-	"fertilizerTypeNames": ["Type1", "Type2", "Type3", "Type4", "Type5"],
+	"fertilizerTypeNames": ["Heat", "Hawks", "Bulls", "Wizards", "Jazz"],
 	"startScoreModifier": 400.0,
 	"endScoreModifier": 400.0,
 	"startGameSpeed": 1.5,

@@ -47,7 +47,6 @@ public class HintHelper : MonoBehaviour
 			WWW reader = new WWW (filePath);
 			while (!reader.isDone) {
 			}
-            Debug.Log(reader.text); //***
 			result = reader.text;
 		} else {
 			if (File.Exists (filePath)) {

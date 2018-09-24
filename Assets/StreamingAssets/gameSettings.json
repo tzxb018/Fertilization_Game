@@ -9,8 +9,8 @@
 	"endBarrelSpawnDelay": 0.5,
 	"startBarrelsRequired": 4.0,
 	"endBarrelsRequired": 8.0,
-	"startMaxLives": 3.0,
-	"endMaxLives": 3.0,
+	"startMaxLives": 4.0,
+	"endMaxLives": 4.0,
 	"startMaxSimultaneousBarrels": 3.0,
 	"endMaxSimultaneousBarrels": 20.0
 }

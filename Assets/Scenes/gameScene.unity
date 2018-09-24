@@ -482,7 +482,7 @@ MonoBehaviour:
   scoreModifier: 400
   barrelSpawnDelay: 3
   maxBarrels: 4
-  maxLives: 3
+  maxLives: 4
   barrelsRequired: 10
   correctSoundVolume: 0.1
   incorrectSoundVolume: 0.05
@@ -495,8 +495,7 @@ MonoBehaviour:
   _successScreen: {fileID: 1581710848}
   _successScore: {fileID: 1459595601}
   _score: {fileID: 725676518}
-  _barrelPrefab: {fileID: 1589436302878768, guid: edaeaa6f04441d7489f7a45dc163004b,
-    type: 2}
+  _barrelPrefab: {fileID: 1071235436}
   _answerButtonPrefab: {fileID: 1603325226097160, guid: 820277363aa20654daad99e3a8e4ef5d,
     type: 2}
   _answerButtonHolder: {fileID: 751848553}
@@ -1329,8 +1328,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 88.75, y: -16.850006}
-  m_SizeDelta: {x: 171.5, y: 27.700012}
+  m_AnchoredPosition: {x: 71.5, y: -16.850006}
+  m_SizeDelta: {x: 137, y: 27.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725676518
 MonoBehaviour:
@@ -1508,18 +1507,37 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7d525597b1d91be4791cd7397d59ddea,
+      objectReference: {fileID: 21300000, guid: 46bd34359460508408cadd5779e45e83,
         type: 3}
     - target: {fileID: 95171217058815452, guid: edaeaa6f04441d7489f7a45dc163004b,
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 4d7d4973c2f3c304ca8301822ea356e8, type: 2}
+      objectReference: {fileID: 9100000, guid: 24464979835422a4c98d0ddb6858795a, type: 2}
     - target: {fileID: 212530906328002208, guid: edaeaa6f04441d7489f7a45dc163004b,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1589436302878768, guid: edaeaa6f04441d7489f7a45dc163004b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212530906328002208, guid: edaeaa6f04441d7489f7a45dc163004b,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 212530906328002208, guid: edaeaa6f04441d7489f7a45dc163004b,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 212530906328002208, guid: edaeaa6f04441d7489f7a45dc163004b,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edaeaa6f04441d7489f7a45dc163004b, type: 2}
   m_IsPrefabAsset: 0
@@ -2159,6 +2177,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1032169642}
   m_CullTransparentMesh: 0
+--- !u!1 &1071235436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1589436302878768, guid: edaeaa6f04441d7489f7a45dc163004b,
+    type: 2}
+  m_PrefabInternal: {fileID: 754100144}
 --- !u!1 &1090129597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,12 +2576,12 @@ Prefab:
     - target: {fileID: 114008414609445058, guid: 9c98b0c2d3fd45f43b5e424aed3b38c4,
         type: 2}
       propertyPath: startMaxLives
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114008414609445058, guid: 9c98b0c2d3fd45f43b5e424aed3b38c4,
         type: 2}
       propertyPath: endMaxLives
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114008414609445058, guid: 9c98b0c2d3fd45f43b5e424aed3b38c4,
         type: 2}
@@ -3023,8 +3046,8 @@ MonoBehaviour:
   endBarrelSpawnDelay: 0.5
   startBarrelsRequired: 3
   endBarrelsRequired: 10
-  startMaxLives: 3
-  endMaxLives: 3
+  startMaxLives: 4
+  endMaxLives: 4
   startMaxSimultaneousBarrels: 3
   endMaxSimultaneousBarrels: 20
 --- !u!4 &1463765267

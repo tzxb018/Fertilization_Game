@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 	public float barrelSpawnDelay = 3f;
 	// -1 represents infinite
 	public int maxBarrels = 4;
-	public int maxLives = 5;
+	public int maxLives = 4;
 	public int barrelsRequired = 10;
 
 	[Range (0, 1)]
@@ -126,7 +126,6 @@ public class GameManager : MonoBehaviour
 		barrelSpawnDelay = SettingsManager.manager.currentBarrelSpawnDelay;
 		maxBarrels = Mathf.CeilToInt (SettingsManager.manager.currentMaxSimultaneousBarrels);
 
-
 		score = SettingsManager.manager.currentScore;
 	}
 
@@ -208,14 +207,14 @@ public class GameManager : MonoBehaviour
 
 		_audioPlayer.PlayOneShot (_incorrectSound, incorrectSoundVolume);
 
-		if (lives <= 1) {
+        lives -= 1;
+
+        if (lives < 1) {
 			FailConditionMet ();
 			lives = 0;
-		} else {
-			lives -= 1;
 		}
 
-		//score -= scoreModifier;
+		score -= scoreModifier;
 		Destroy (barrel.gameObject);
 	}
 

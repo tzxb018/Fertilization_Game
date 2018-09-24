@@ -37,6 +37,11 @@
       <HintText>Michael Jordan</HintText>
     </Barrel>
 	<Barrel>
+      <FerilizerType>Hawks</FerilizerType>
+      <HintDifficulty>1</HintDifficulty>
+      <HintText>Dikembe Mutombo</HintText>
+    </Barrel>
+	<Barrel>
       <FerilizerType>Heat</FerilizerType>
       <HintDifficulty>1</HintDifficulty>
       <HintText>Template</HintText>

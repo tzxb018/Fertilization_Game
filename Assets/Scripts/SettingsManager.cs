@@ -60,12 +60,12 @@ public class SettingsManager : MonoBehaviour
 		}
 	}
 
-	public float startMaxLives = .5f;
-	public float endMaxLives = .6f;
+	public float startMaxLives = .2f;
+	public float endMaxLives = .3f;
 
 	public float currentMaxLives {
 		get {
-            
+            Debug.Log("Settings:" + ((currentStage / stagesToMax) * (endMaxLives - startMaxLives) + startMaxLives).ToString());
 			return (currentStage / stagesToMax) * (endMaxLives - startMaxLives) + startMaxLives;
 		}
 	}

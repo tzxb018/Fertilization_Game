@@ -4,26 +4,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuManager : MonoBehaviour
+public class EditMenuManager : MonoBehaviour
 {
 
 	[SerializeField]
 	private GameObject _titlePanel;
 
 	[SerializeField]
-	private GameObject _difficultyPanel;
+	private GameObject _cropImagePanel;
 
 
 	void Start ()
 	{
 		_titlePanel.SetActive (true);
-		_difficultyPanel.SetActive (false);
+		_cropImagePanel.SetActive (false);
 	}
 
 	public void ShowDifficulties ()
 	{
 		_titlePanel.SetActive (false);
-		_difficultyPanel.SetActive (true);
+		_cropImagePanel.SetActive (true);
 	}
 
     public void EditGameNewScene()

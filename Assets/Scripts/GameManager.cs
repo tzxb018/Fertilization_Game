@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	[Header ("Game Variable configuration")]
-	public float speedModifier = 1f;
-	public float scoreModifier = 400f;
-	public float barrelSpawnDelay = 3f;
-	// -1 represents infinite
-	public int maxBarrels = 4;
-	public int maxLives = 4;
-	public int barrelsRequired = 10;
+    //[Header ("Game Variable configuration")]
+    float speedModifier;
+    float scoreModifier;
+    float barrelSpawnDelay;
+    // -1 represents infinite
+    int maxBarrels;
+    int maxLives;
+    int barrelsRequired;
 
-	[Range (0, 1)]
+    [Range (0, 1)]
 	public float correctSoundVolume = .5f;
 
 	[Range (0, 1)]
@@ -83,13 +83,15 @@ public class GameManager : MonoBehaviour
 
 	private bool gameOver = false;
 
-	// Initialize some basic parameters
-	void Awake ()
-	{
-		_audioPlayer = GetComponent<AudioSource> ();
-		lives = maxLives;
-		barrels = new Queue<BarrelManager> (10);
-	}
+    // Initialize some basic parameters
+    void Awake()
+    {
+        _audioPlayer = GetComponent<AudioSource>();
+        RetrieveSettings();
+        lives = maxLives;
+        Debug.Log("Awake: " + maxLives + " " + lives);
+        barrels = new Queue<BarrelManager>(10);
+    }
 
 	// Generate GUI response buttons based on input from json and difficulty selected
 	void InitializeAnswerButtons ()
@@ -125,7 +127,7 @@ public class GameManager : MonoBehaviour
 		maxLives = Mathf.CeilToInt (SettingsManager.manager.currentMaxLives);
 		barrelSpawnDelay = SettingsManager.manager.currentBarrelSpawnDelay;
 		maxBarrels = Mathf.CeilToInt (SettingsManager.manager.currentMaxSimultaneousBarrels);
-
+        Debug.Log(maxLives);
 		score = SettingsManager.manager.currentScore;
 	}
 
@@ -133,7 +135,7 @@ public class GameManager : MonoBehaviour
 	void Start ()
 	{
 		gameOver = false;
-		RetrieveSettings ();
+		//RetrieveSettings ();
 		InitializeAnswerButtons ();
 		InitializeHealth ();
 		CalculateScore ();
@@ -158,14 +160,16 @@ public class GameManager : MonoBehaviour
 	// Set slider to intitial conditions
 	void InitializeHealth ()
 	{
-		_healthSlider.maxValue = maxLives;
+        Debug.Log("Init Health; " + maxLives);
+        _healthSlider.maxValue = maxLives;
 		_healthSlider.value = maxLives;
 	}
 
 	// Display health slider based on life variable
 	void DisplayHealth ()
 	{
-		_healthSlider.value = lives;
+        Debug.Log("Disply Health: " + lives);
+        _healthSlider.value = lives;
 	}
 
 	// Called when too many lives are lost.  Shows end game screen and stops game.
@@ -206,7 +210,7 @@ public class GameManager : MonoBehaviour
 		Instantiate (_explosionPrefab).transform.position = barrel.transform.position;
 
 		_audioPlayer.PlayOneShot (_incorrectSound, incorrectSoundVolume);
-
+        Debug.Log("Handle In: " + lives);
         lives -= 1;
 
         if (lives < 1) {

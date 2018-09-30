@@ -13,14 +13,20 @@ public class EditMenuManager : MonoBehaviour
 	[SerializeField]
 	private GameObject _cropImagePanel;
 
+    [SerializeField]
+    private GameObject _button1;
+
+    [SerializeField]
+    private GameObject _button2;
+
 
 	void Start ()
 	{
-		_titlePanel.SetActive (true);
-		_cropImagePanel.SetActive (false);
-	}
+        _titlePanel.SetActive(true);
+        _cropImagePanel.SetActive(false);
+    }
 
-	public void ShowDifficulties ()
+    public void ShowEditImagePanel ()
 	{
 		_titlePanel.SetActive (false);
 		_cropImagePanel.SetActive (true);
@@ -30,24 +36,6 @@ public class EditMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("editGameScene");
     }
-
-	public void StartEasy ()
-	{
-		SettingsManager.manager.LoadEasy ();
-		StartScene ();
-	}
-
-	public void StartMedium ()
-	{
-		SettingsManager.manager.LoadMedium ();
-		StartScene ();
-	}
-
-	public void StartHard ()
-	{
-		SettingsManager.manager.LoadHard ();
-		StartScene ();
-	}
 
 	public void StartScene ()
 	{
